@@ -74,11 +74,18 @@ nav ul li a:hover {
   justify-content: center;
 }
 
-.hero-img img {
-  width: 300px;
-  border-radius: 80px;
-  margin-left: auto;
-  margin-right: 0;
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* stack text ug image */
+    text-align: center;
+    height: auto; /* dili pugson nga full screen */
+    padding: 100px 20px; /* gamay spacing */
+  }
+
+  .hero-img img {
+    margin: 20px auto 0; /* center ang image */
+    width: 200px; /* gamay sa phone */
+  }
 }
 
 /* Button */
@@ -354,10 +361,28 @@ body {
   }
 
   .menu-toggle {
-    display: block;
-  }
+  display: none;
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+}
 
-  nav ul.show {
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* makita sa phone */
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #252323;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+} nav ul.show {
     display: flex;
   }
 }
