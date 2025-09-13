@@ -300,3 +300,34 @@ body{
   font-size: 15px;
   transition: width 0.8s ease-in-out;
 }
+/* Hamburger style */
+.menu-toggle {
+  display: none;
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Hide menu in mobile by default */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #252323;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+  nav ul li {
+    margin: 15px 0;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  nav ul.show {
+    display: flex; /* show menu when active */
+  }
+}
