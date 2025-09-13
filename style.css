@@ -7,40 +7,69 @@
 }
 
 /* Navbar */
+/* Header */
 header {
   width: 100%;
+  max-width: 1500px;  /* limit ang lapad */
+  margin: 0 auto;     /* center sa screen */
   display: flex;
-  justify-content: space-between; /* logo left, nav/hamburger right */
+  justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
+  padding: 15px 20px; /* gamay ra nga padding */
   background: #252323;
   position: fixed;
   top: 0;
   z-index: 1000;
 }
 
+/* Logo */
 .logo {
   font-weight: bold;
   font-size: 18px;
   color: #f6fcf6e7;
 }
 
-/* nav list */
+/* Navbar ul */
 nav ul {
   display: flex;
   list-style: none;
+  gap: 20px;          /* space sa tunga sa links */
 }
 
-nav ul li {
-  margin-right: 25px;
-}
-
+/* Navbar links */
 nav ul li a {
   text-decoration: none;
   color: #faf7f7e7;
   font-size: 15px;
   font-weight: 500;
-  padding: 5px 0;
+  padding: 5px 10px;  /* mas gamay nga padding */
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #252323;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+  nav ul li {
+    margin: 10px 0;
+  }
+  .menu-toggle {
+    display: block;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+  }
+  nav ul.show {
+    display: flex;
+  }
 }
 
 nav ul li a:hover {
