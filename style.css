@@ -449,13 +449,13 @@ body {
   nav ul {
     display: flex;
     flex-direction: column;
-    background: #252323;
+    background: #a37e7e;
     position: fixed;        /* para mo-appear sa kilid */
     top: 0;
-    right: -250px;          /* hidden initially sa kilid */
-    height: 100vh;          /* full screen height */
-    width: 250px;           /* fixed width sa sidebar */
-    padding-top: 60px;      /* space sa header */
+    right: 150px;          /* hidden initially sa kilid */
+    height: 100px;          /* full screen height */
+    width: 100px;           /* fixed width sa sidebar */
+    padding-top: 40px;      /* space sa header */
     transition: right 0.3s ease;
   }
 
@@ -471,12 +471,12 @@ body {
 
   nav ul li a {
     color: #fff;
-    font-size: 18px;
+    font-size: 10px;
   }
 
   .menu-toggle {
     display: block;
-    font-size: 25px;
+    font-size: 15px;
     cursor: pointer;
     color: #fff;
   }
