@@ -32,8 +32,14 @@
     <div class="hero-img">
       <img src="pic\IMG_20250910_191722.jpg" alt="Profile Picture">
     </div>
-    <div class="menu-toggle" id="menu-toggle">☰</div>
-  </header>
+    <script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('nav ul');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
   </section>
 
    
