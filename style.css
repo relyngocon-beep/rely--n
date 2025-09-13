@@ -1,4 +1,6 @@
-/* Reset */
+/* =====================
+   RESET / GLOBAL STYLES
+===================== */
 * {
   margin: 0;
   padding: 0;
@@ -6,16 +8,21 @@
   font-family: Arial, sans-serif;
 }
 
-/* Navbar */
-/* Header */
+body {
+  background: linear-gradient(to right, #84888b, #94cac4, #a19494);
+}
+
+/* =====================
+   HEADER / NAVBAR
+===================== */
 header {
   width: 100%;
-  max-width: 1500px;  /* limit ang lapad */
-  margin: 0 auto;     /* center sa screen */
+  max-width: 1500px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px; /* gamay ra nga padding */
+  padding: 15px 20px;
   background: #252323;
   position: fixed;
   top: 0;
@@ -29,63 +36,73 @@ header {
   color: #f6fcf6e7;
 }
 
-/* Navbar ul */
+/* Navbar links */
 nav ul {
   display: flex;
   list-style: none;
-  gap: 20px;          /* space sa tunga sa links */
+  gap: 20px;
 }
 
-/* Navbar links */
 nav ul li a {
   text-decoration: none;
   color: #faf7f7e7;
   font-size: 15px;
   font-weight: 500;
-  padding: 5px 10px;  /* mas gamay nga padding */
-}
-
-/* Mobile view */
-@media (max-width: 768px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background: #252323;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-  }
-  nav ul li {
-    margin: 10px 0;
-  }
-  .menu-toggle {
-    display: block;
-    font-size: 25px;
-    color: #fff;
-    cursor: pointer;
-  }
-  nav ul.show {
-    display: flex;
-  }
+  padding: 5px 10px;
 }
 
 nav ul li a:hover {
   border-bottom: 2px solid #f0eaea;
 }
 
-/* Hamburger style */
+/* Hamburger icon */
 .menu-toggle {
   display: none;
   font-size: 25px;
   color: #fff;
   cursor: pointer;
-  margin-left: 40px;
 }
 
-/* Hero Section */
+/* =====================
+   MOBILE NAVBAR
+===================== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* makita sa phone */
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #252323;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 180px;   /* gamay ra para mobile */
+    text-align: left;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 8px 0;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+    padding: 8px 10px;
+    display: block;
+  }
+}
+
+/* =====================
+   HERO SECTION
+===================== */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -96,32 +113,45 @@ nav ul li a:hover {
   background: linear-gradient(to right, #84888b, #94cac4, #a19494);
 }
 
-/* Hero Image */
 .hero img {
-  width: 300px;   /* fixed width */
-  height: 300px;  /* fixed height */
-  object-fit: cover; /* para dili ma-distort ang image */
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
   display: block;
-  margin: 0 auto; /* ipa-center */
-  border-radius: 10px; /* optional */
+  margin: 0 auto;
 }
 
+.hero-text h2 {
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 1.4;
+  color: #161616;
+}
+
+.hero-text p {
+  margin: 20px 0;
+  color: #880404;
+  font-size: 20px;
+}
 
 @media (max-width: 768px) {
   .hero {
-    flex-direction: column; /* stack text ug image */
+    flex-direction: column;
     text-align: center;
-    height: auto; /* dili pugson nga full screen */
-    padding: 100px 20px; /* gamay spacing */
+    height: auto;
+    padding: 100px 20px;
   }
 
-  .hero-img img {
-    margin: 20px auto 0; 
-    width: 200px; 
+  .hero img {
+    width: 200px;
+    margin: 20px auto 0;
   }
 }
 
-/* Button */
+/* =====================
+   BUTTON
+===================== */
 .btn {
   display: inline-block;
   padding: 5px 18px;
@@ -136,21 +166,198 @@ nav ul li a:hover {
   background: #abb156;
 }
 
-/* Hero text */
-.hero-text h2 {
+/* =====================
+   ABOUT SECTION
+===================== */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 20px;
+  margin: 40px auto;
+  gap: 30px;
+}
+
+.about-container h2 {
   font-size: 35px;
-  font-weight: bold;
-  line-height: 1.4;
-  color: #161616;
+  color: #720b0b;
+  text-align: center;
 }
 
-.hero-text p {
-  margin: 20px 0;
-  color: #880404;
+.about-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.about-box {
+  width: 250px;
+  height: 280px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.about-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.about-text h3 {
   font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
 }
 
-/* Contact */
+.about-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1f1d1d;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.info-box {
+  background: #f8dddd;
+  color: #201e1e;
+  padding: 15px;
+  border-radius: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label {
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =====================
+   EDUCATION SECTION
+===================== */
+.edu-container {
+  padding: 30px;
+  border-radius: 25px;
+  max-width: 800px;
+  text-align: center;
+  margin: 80px auto 40px;
+}
+
+.edu-container h2 {
+  font-size: 28px;
+  color: #1b1a1a;
+  margin-bottom: 40px;
+}
+
+.edu-list {
+  list-style: none;
+  padding: 0;
+}
+
+.edu-list li {
+  margin: 20px 0;
+  padding: 18px;
+  border-left: 5px solid #ebe041;
+  text-align: left;
+  background: #fcfafa;
+  border-radius: 8px;
+}
+
+.edu-list h3 {
+  margin: 0;
+  color: #be4143;
+  font-size: 18px;
+  text-align: center;
+}
+
+.edu-list p {
+  margin: 5px 0 0;
+  color: #0e0d0d;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* =====================
+   SKILLS SECTION
+===================== */
+.skills-section {
+  max-width: 800px;
+  margin: 70px auto;
+  padding: 35px;
+}
+
+.skills-section h2 {
+  text-align: center;
+  color: #c4574f;
+  margin-bottom: 17px;
+}
+
+.skills-box p {
+  background: #e8f4ff;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 10px 0;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.progress-skill {
+  margin: 20px 0;
+}
+
+.progress-skill span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 1px;
+}
+
+.progress-bar {
+  width: 100%;
+  background: #f0efef;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-bar .fill {
+  background: #207c56;
+  color: #fcf7f7;
+  text-align: right;
+  padding-right: 8px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 20px;
+  font-size: 15px;
+  transition: width 0.8s ease-in-out;
+}
+
+/* =====================
+   CONTACT SECTION
+===================== */
 .contact-container {
   padding: 30px;
   max-width: 800px;
@@ -210,257 +417,4 @@ nav ul li a:hover {
 .contact-info p {
   margin: 5px 0;
   color: #0a0a0a;
-}
-
-/* About me */
-/* ===== ABOUT SECTION ===== */
-/* About Container */
-.about-container {
-  display: flex;
-  flex-direction: column; /* Title sa taas, boxes sa ubos */
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-  border-radius: 20px;
-  margin: 40px auto;
-  gap: 30px;
-  background: transparent;
-}
-
-/* Title */
-.about-container h2 {
-  font-size: 35px;
-  color: #720b0b;
-  text-align: center;
-  bottom: 50px;
-}
-
-/* Wrapper sa boxes */
-.about-boxes {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: nowrap;     /* para dili mu-line sa phone */
-  overflow-x: auto;      /* horizontal scroll kung kulang ang space */
-  width: 100%;
-}
-
-/* Each Box */
-.about-box {
-  width: 280px;       /* fixed width pareho sa index */
-  height: 300px;      /* fixed height */
-  background: #fff;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  flex-shrink: 0;      /* dili mu-gamay sa phone */
-}
-
-/* Image sa About */
-.about-img {
-  width: 150px;        /* same size as index */
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 15px;
-}
-
-/* Text inside About */
-.about-text h3 {
-  font-size: 22px;   /* same as index */
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.about-text p {
-  font-size: 16px;   /* same as index */
-  line-height: 1.6;
-  color: #1f1d1d;
-}
-
-
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  margin-top: 25px;
-}
-
-.info-box {
-  background: #f8dddd;
-  color: #201e1e;
-  padding: 15px;
-  border-radius: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.label {
-  font-weight: bold;
-}
-
-@media (max-width: 600px) {
-  .info-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Education */
-body {
-  background: linear-gradient(to right, #84888b, #94cac4, #a19494);
-}
-
-.edu-container {
-  padding: 30px;
-  border-radius: 25px;
-  max-width: 800px;
-  text-align: center;
-  margin: 80px auto;
-  margin-top: 70px;
-}
-
-.edu-container h2 {
-  font-size: 28px;
-  color: #1b1a1a;
-  margin-bottom: 40px;
-}
-
-.edu-list {
-  list-style: none;
-  padding: 0;
-}
-
-.edu-list li {
-  margin: 20px 0;
-  padding: 18px;
-  border-left: 5px solid #ebe041;
-  text-align: left;
-  background: #fcfafa;
-  border-radius: 8px;
-}
-
-.edu-list h3 {
-  margin: 0;
-  color: #be4143;
-  font-size: 18px;
-  text-align: center;
-}
-
-.edu-list p {
-  margin: 5px 0 0;
-  color: #0e0d0d;
-  font-size: 16px;
-  text-align: center;
-}
-
-/* My skills */
-.skills-section {
-  max-width: 800px;
-  margin: 70px auto;
-  padding: 35px;
-}
-
-.skills-section h2 {
-  text-align: center;
-  color: #c4574f;
-  margin-bottom: 17px;
-  margin-top: 0%;
-}
-
-.skills-box p {
-  background: #e8f4ff;
-  padding: 12px;
-  border-radius: 10px;
-  margin: 10px 0;
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-/* Progress bars */
-.progress-skill {
-  margin: 20px 0;
-}
-
-.progress-skill span {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 1px;
-}
-
-.progress-bar {
-  width: 100%;
-  background: #f0efef;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.progress-bar .fill {
-  background: #207c56;
-  color: #fcf7f7;
-  text-align: right;
-  padding-right: 8px;
-  height: 30px;
-  line-height: 30px;
-  border-radius: 20px;
-  font-size: 15px;
-  transition: width 0.8s ease-in-out;
-}
-
-/* Mobile view */
-@media (max-width: 768px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background: #252323;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  nav ul li {
-    margin: 8px 0;
-  }
-
-  nav ul li a {
-    font-size: 14px;
-    padding: 8px 0;
-    display: block;
-  }
-
-  .menu-toggle {
-  display: none;
-  font-size: 25px;
-  color: #fff;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block; /* makita sa phone */
-  }
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background: #252323;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-  }
-} nav ul.show {
-    display: flex;
-  }
 }
