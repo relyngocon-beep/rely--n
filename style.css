@@ -449,7 +449,7 @@ body {
   nav ul {
     display: flex;
     flex-direction: column;
-    background: #eee6e6;
+    background: #252323;
     position: fixed;        /* para mo-appear sa kilid */
     top: 0;
     right: -250px;          /* hidden initially sa kilid */
