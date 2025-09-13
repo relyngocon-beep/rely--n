@@ -29,7 +29,6 @@ nav ul {
 }
 nav ul li {
   margin-right: 25px;
-  
 }
 nav ul li a {
   text-decoration: none;
@@ -37,7 +36,6 @@ nav ul li a {
   font-size: 15px;
   font-weight: 500;
   padding: 5px 0;
-  
 }   
 nav ul li a:hover {
   border-bottom: 2px solid #f0eaea;
@@ -57,7 +55,6 @@ nav ul li a:hover {
   flex: 1;
   display: flex;
   justify-content: center;
-  
 }
 .hero-img img {
  width: 400px;
@@ -93,9 +90,7 @@ nav ul li a:hover {
 }
 /* about contact ni*/
 .contact-container {
-  
   padding: 30px;
-  
   max-width: 800px;
 }
 .contact-container h2 {
@@ -152,11 +147,9 @@ nav ul li a:hover {
 }
 /*about me*/
 .about-container {
-  
   text-align: center;
   padding: 40px;
   border-radius: 15px;
- 
   width: 800px;
   margin: 40px auto;
   justify-content: center;  /* horizontal center lang */
@@ -207,10 +200,8 @@ body{
  background: linear-gradient(to right, #84888b,#94cac4, #a19494);
 }
 .edu-container {
-  
   padding: 30px;
   border-radius: 25px;
-  
   max-width: 800px;
   text-align: center;
   margin: 80px auto;
@@ -247,21 +238,17 @@ body{
   text-align: center;
 }
 
-
 /* My skills */
 .skills-section {
   max-width: 800px;
   margin: 70px auto;
   padding: 35px;
-  
 }
-
 .skills-section h2 {
   text-align: center;
   color: #c4574f;
   margin-bottom: 25px;
 }
-
 .skills-box p {
   background: #e8f4ff;
   padding: 12px;
@@ -270,25 +257,21 @@ body{
   font-size: 18px;
   line-height: 1.5;
 }
-
 /* Progress bars */
 .progress-skill {
   margin: 20px 0;
 }
-
 .progress-skill span {
   font-weight: bold;
   display: block;
   margin-bottom: 1px;
 }
-
 .progress-bar {
   width: 100%;
   background: #f0efef;
   border-radius: 20px;
   overflow: hidden;
 }
-
 .progress-bar .fill {
   background: #207c56;
   color: #fcf7f7;
@@ -300,6 +283,7 @@ body{
   font-size: 15px;
   transition: width 0.8s ease-in-out;
 }
+
 /* Hamburger style */
 .menu-toggle {
   display: none;
@@ -308,7 +292,7 @@ body{
   cursor: pointer;
 }
 
-/* Hide menu in mobile by default */
+/* Mobile view */
 @media (max-width: 768px) {
   nav ul {
     display: none;
@@ -322,7 +306,12 @@ body{
     padding: 10px 0;
   }
   nav ul li {
-    margin: 15px 0;
+    margin: 8px 0; /* gamay ra gap */
+  }
+  nav ul li a {
+    font-size: 14px; /* gamay ra font */
+    padding: 8px 0;  /* gamay ra padding */
+    display: block; /* para tarong align */
   }
   .menu-toggle {
     display: block;
