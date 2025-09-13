@@ -417,6 +417,36 @@ body {
 /* Mobile view */
 @media (max-width: 768px) {
   nav ul {
+    display: none;
+    flex-direction: column;
+    background: #252323;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  nav ul li {
+    margin: 8px 0;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+    padding: 8px 0;
+    display: block;
+  }
+
+  .menu-toggle {
+  display: none;
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav ul {
     display: flex;
     flex-direction: column;
     background: #252323;
@@ -451,23 +481,4 @@ body {
     color: #fff;
   }
 }
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block; /* makita sa phone */
-  }
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background: #252323;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-  }
-} nav ul.show {
-    display: flex;
-  }
 }
