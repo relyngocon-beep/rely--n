@@ -371,7 +371,8 @@ body {
 .skills-section h2 {
   text-align: center;
   color: #c4574f;
-  margin-bottom: 25px;
+  margin-bottom: 17px;
+  margin-top: 0%;
 }
 
 .skills-box p {
@@ -416,20 +417,21 @@ body {
 /* Mobile view */
 @media (max-width: 768px) {
   nav ul {
-    display: none;
+    width: auto;        /* dili na full screen */
+    padding: 0;
     flex-direction: column;
+    text-align: center;
+    display: none;
     background: #252323;
     position: absolute;
     top: 60px;
     right: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
   }
-
   nav ul li {
-    margin: 8px 0;
+    margin: 10px 0;
   }
+}
+
 
   nav ul li a {
     font-size: 14px;
