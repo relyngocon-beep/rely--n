@@ -50,13 +50,13 @@ nav ul li a {
   nav ul {
     display: flex;
     flex-direction: column;
-    background: #252323;
+    background: #4b4949;
     position: fixed;        /* para mo-appear sa kilid */
     top: 0;
-    right: -250px;          /* hidden initially sa kilid */
+    right: 200px;          /* hidden initially sa kilid */
     height: 100vh;          /* full screen height */
-    width: 250px;           /* fixed width sa sidebar */
-    padding-top: 60px;      /* space sa header */
+    width: 150px;           /* fixed width sa sidebar */
+    padding-top: 40px;      /* space sa header */
     transition: right 0.3s ease;
   }
 
@@ -82,6 +82,7 @@ nav ul li a {
     color: #fff;
   }
 }
+
 
   nav ul.show {
     display: flex;
